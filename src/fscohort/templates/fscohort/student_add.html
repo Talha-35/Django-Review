@@ -1,0 +1,24 @@
+
+{% extends 'fscohort/base.html' %}
+
+{% block title %}
+add student
+{% endblock title %}
+
+
+{% block content %}
+<h2>Add Student</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- yukardaki kod da bir nevi gvencedir. verinin güvenli gittiğini doğru hosttan geldiğini gösterir -->
+    {{ form.as_p }}
+    <!-- yukardaki komut paragraf yapmaya yarar -->
+    <input type="submit" value="Add">
+    <a href="{% url 'list' %}">
+        <button>list</button>
+    </a>
+</form>
+{% endblock %}
+        
+
+   
